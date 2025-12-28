@@ -1,4 +1,4 @@
-# Developing NER Models for Financial Data Extraction 📊
+# Developing NER Models for Financial Data Extraction 
 
 This project implements an end-to-end Natural Language Processing (NLP) pipeline to extract structured financial information from unstructured financial text such as news articles and reports.
 
@@ -18,7 +18,7 @@ The project was developed as part of an AI internship and demonstrates data coll
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 Infosys-Project/
 │
@@ -36,7 +36,7 @@ Infosys-Project/
 
 ---
 
-## 📊 Dataset Description
+##  Dataset Description
 
 The project uses financial news datasets collected from Kaggle:
 - Financial News Dataset
@@ -46,7 +46,7 @@ These datasets provide a large and diverse corpus of financial text for NLP task
 
 ---
 
-## ⚙️ Technologies Used
+##  Technologies Used
 
 - Python 3.10
 - spaCy
@@ -57,7 +57,7 @@ These datasets provide a large and diverse corpus of financial text for NLP task
 ---
 
 
-## 🔄 Project Workflow
+##  Project Workflow
 
 ### 1. Data Collection
 - Financial datasets downloaded from Kaggle
