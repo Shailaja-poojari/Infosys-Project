@@ -1,5 +1,9 @@
 {
-  "company": "Sample Financial Corpus",
+  "company": [
+    "REC",
+    "BSE",
+    "CSR"
+  ],
   "sections": {
     "General": [],
     "Financial Statements": [
@@ -83,7 +87,13 @@
     "MD&A": [
       "56 crore in the corresponding period last year  GMR Group is in discussions with SembCorp Industries, Lone Star Fund for the stake sale in the Chhattisgarh power plant in a move to pare its debt Indian IT professionals accounted for 16% of the over 1 lakh visas issued under the 457 visa programme by Australia in 2015-16 Move comes amidst the income tax department uncovering anomalies in cooperative bank accounts post demonetisation"
     ],
-    "Risk Factors": []
+    "Risk Factors": [
+      "9% on Wednesday partly because Son, founder of the Internet and mobile-phone giant, is staying in charge\r\r\r\r\r\n Greenko acquired SunEdison\u0092s Indian assets in October at an enterprise value of $392 million; deal required Greenko to assume project-level debt of $350 million The rise in output may seem problematic, for Worldsteel had predicted in April that the global demand for steel would decline by 0",
+      "44 crore last year Samsung saw its mobile earnings plunge 98% from a year earlier to its lowest since the fourth quarter of 2008 Nitin Shukla, present MD and CEO of Hazira LNG and Hazira Ports, will retire after 15 years of service on 30 September\r\r\r\r\r\n At the 10th Mint Annual Banking Conclave, bankers discuss whether the Indian banking system is missing key opportunities in its rush to adopt technology Axis Bank may sell its 8% stake in mobile payments firm Mswipe for around $20 million in a deal that is likely to value that firm at $200-250 million In less than a month after the March quarter results were announced, stocks of leading hotel chains in the country have bounced back after years of doing nothing much\r\r\r\r\r\n Akash Gupta, co-founder and chief technology officer at GreyOrange, speaks about the journey of GreyOrange and its future plans\r\r\r\r\r\n Finance ministry\u0092s FIU has asked RBI to examine all foreign investments under the automatic route after January 2015, when FDI policy for the sector was laid out Ford to invest $195 million in the centre, which will also house the firm\u0092s largest IT organization outside of its global headquarters Biocon chairperson Kiran Mazumdar-Shaw says Rs460 crore insulin supply pact with Malaysian government will de-risk Biocon\u0092s investment in setting up the plant there AI can be effectively used in a wide range of government initiatives Lufthansa\u0092s comments come weeks after Qatar Airways Ltd said it plans to start an airline in India with as many as 100 planes Ajit  Pai has often voted for tighter regulations, including the 2015 open internet, or net neutrality, decision that forbids internet service providers from unfairly blocking or slowing web traffic The finance ministry has initiated detailed discussions with select public sector banks to assess their growth blueprint over the next three years  Q4 revenue of Tata Consultancy Services (TCS) rose 5",
+      "8% decline of the S&P BSE Sensex index Wipro is learnt to have sacked 600 employees as part of its annual \u0091performance appraisal\u0092, at a time when IT firms are facing curbs on work visas in US and Australia Fuel retailers including Indian Oil will change petrol and diesel prices daily in Puducherry, Visakhapatnam, Udaipur, Jamshedpur and Chandigarh It is no secret now\u0097though many in the ecosystem continue to deny it\u0097that the slowdown in India\u0092s venture capital market is real\r\r\r\r\r\n The agrochemical firm is likely to incur a capex of ,800-900 crore per annum for the next couple of years to expand and upgrade capacities\r\r\r\r\r\n Since Shree Cement has been expanding its footprint, a slew of brokerage houses are gung-ho on the stock, citing it to be a beneficiary of cement demand recovery A higher raw material cost effect is bound to weigh on profit margins in the current and forthcoming quarters, unless price hikes and sales offset the same Announcing the first profit in decades, MD P",
+      "Chandraiah said in the current year, Bengal Chemicals\u0092 operating profit can be ramped up to Rs10 crore Ashoka Buildcon\u0092s third quarter income from operations rose to Rs524 crore as against Rs443 crore from a year ago In an interview, Air India boss Ashwani Lohani talked about the Udan scheme for regional aviation, competition from IndiGo, privatization and debt issues In a letter to Wipro employees, Azim Premji urged them to increase their commitment to others and find common ground rather than focussing on conflicts The transaction includes ,72,800 crore for Essar Oil\u0092s refining and retail assets, and ,13,300 crore for Vadinar port and related infrastructure Railways\u0092 mobile app for unreserved tickets  now allows payments through  apps such as Paytm and MobiKwik and  print-out  of the tickets Hero MotoCorp\u0092s net profit in the December quarter declined to Rs772",
+      "Videocon Industries fourth quarter total income on a standalone basis declined to Rs2,097"
+    ]
   },
   "sample_entities": [
     [
@@ -136,5 +146,10 @@
       "item": "44 crore last year Samsung saw its mobile earnings plunge 98% from a year earlier to its lowest since the fourth quarter of 2008 Nitin Shukla, present MD and CEO of Hazira LNG and Hazira Ports, will retire after 15 years of service on 30 September At the 10th Mint Annual Banking Conclave, bankers discuss whether the Indian banking system is missing key opportunities in its rush to adopt technology Axis Bank may sell its 8% stake in mobile payments firm Mswipe for around $20 million in a deal that is likely to value that firm at $200-250 million In less than a month after the March quarter results were announced, stocks of leading hotel chains in the country have bounced back after years of doing nothing much Akash Gupta, co-founder and chief technology officer at GreyOrange, speaks about the journey of GreyOrange and its future plans Finance ministry\u0092s FIU has asked RBI to examine all foreign investments under the automatic route after January 2015, when FDI policy for the sector was laid out Ford to invest $195 million in the centre, which will also house the firm\u0092s largest IT organization outside of its global headquarters Biocon chairperson Kiran Mazumdar-Shaw says Rs460 crore insulin supply pact with Malaysian government will de-risk Biocon\u0092s investment in setting up the plant there AI can be effectively used in a wide range of government initiatives Lufthansa\u0092s comments come weeks after Qatar Airways Ltd said it plans to start an airline in India with as many as 100 planes Ajit Pai has often voted for tighter regulations, including the 2015 open internet, or net neutrality, decision that forbids internet service providers from unfairly blocking or slowing web traffic The finance ministry has initiated detailed discussions with select public sector banks to assess their growth blueprint over the next three years Q4 revenue of Tata Consultancy Services (TCS) rose",
       "value": "5"
     }
+  ],
+  "data_sources": [
+    "Financial News Dataset (Kaggle)",
+    "Indian Financial News Dataset (Kaggle)",
+    "SEC 10-K Annual Report (Text)"
   ]
 }

@@ -155,3 +155,94 @@ with open("output/final_output.json", "w") as f:
     json.dump(final_output, f, indent=2)
 
 print("\nFinal structured JSON saved to output/final_output.json")
+
+# ===============================
+# EXTRA: PROCESS ANNUAL REPORT (10-K)
+# ===============================
+
+annual_report_path = "raw/annual_reports/adp_10k_2021.txt"
+
+try:
+    with open(annual_report_path, "r", encoding="utf-8", errors="ignore") as f:
+        annual_text = f.read()
+
+    print("\nAnnual Report Loaded Successfully")
+    print("Annual Report Length:", len(annual_text))
+
+    # ---------- Section Detection ----------
+    sections = {
+        "General": [],
+        "Financial Statements": [],
+        "MD&A": [],
+        "Risk Factors": []
+    }
+
+    for line in annual_text.split("\n"):
+        line_lower = line.lower()
+
+        if "risk factor" in line_lower:
+            sections["Risk Factors"].append(line.strip())
+        elif "management’s discussion" in line_lower or "management's discussion" in line_lower:
+            sections["MD&A"].append(line.strip())
+        elif "financial statement" in line_lower:
+            sections["Financial Statements"].append(line.strip())
+
+    print("\nDetected Sections from Annual Report:")
+    for k, v in sections.items():
+        print(f"{k}: {len(v)} lines")
+
+except FileNotFoundError:
+    print("Annual report file not found. Skipping annual report processing.")
+
+    # =========================================================
+# FINAL ENHANCEMENTS: COMPANY NAME & RISK FACTOR FALLBACK
+# =========================================================
+
+# ---------- COMPANY NAME EXTRACTION ----------
+def extract_company_names(text, top_n=3):
+    doc = nlp(text)
+    orgs = [ent.text for ent in doc.ents if ent.label_ == "ORG"]
+    return list(dict.fromkeys(orgs))[:top_n]  # unique + ordered
+
+
+company_names = extract_company_names(long_document)
+
+if not company_names:
+    company_names = ["Unknown Company"]
+
+
+# ---------- RISK FACTOR FALLBACK (NEWS DATA) ----------
+RISK_KEYWORDS = [
+    "risk", "uncertain", "challenge", "threat",
+    "slowdown", "regulatory", "litigation",
+    "debt", "loss", "decline", "volatility"
+]
+
+risk_fallback = []
+
+for sentence in long_document.split("."):
+    if any(k in sentence.lower() for k in RISK_KEYWORDS):
+        cleaned = sentence.strip()
+        if len(cleaned) > 40:
+            risk_fallback.append(cleaned)
+
+risk_fallback = risk_fallback[:5]
+
+# If Risk Factors section is empty, fill it
+if "Risk Factors" in final_output["sections"]:
+    if len(final_output["sections"]["Risk Factors"]) == 0:
+        final_output["sections"]["Risk Factors"] = risk_fallback
+
+
+# ---------- UPDATE FINAL JSON ----------
+final_output["company"] = company_names
+final_output["data_sources"] = [
+    "Financial News Dataset (Kaggle)",
+    "Indian Financial News Dataset (Kaggle)",
+    "SEC 10-K Annual Report (Text)"
+]
+
+with open("output/final_output.json", "w") as f:
+    json.dump(final_output, f, indent=2)
+
+print("\n✔ Enhanced JSON updated with company name and risk factors")
