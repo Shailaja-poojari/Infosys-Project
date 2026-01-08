@@ -1,4 +1,4 @@
-# Developing NER Models for Financial Data Extraction 📊
+# Developing NER Models for Financial Data Extraction 
 
 This project implements an end-to-end Natural Language Processing (NLP) pipeline to extract structured financial information from unstructured financial text such as news articles and reports.
 
@@ -18,7 +18,7 @@ The project was developed as part of an AI internship and demonstrates data coll
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 Infosys-Project/
 │
@@ -36,7 +36,7 @@ Infosys-Project/
 
 ---
 
-## 📊 Dataset Description
+##  Dataset Description
 
 The project uses financial news datasets collected from Kaggle:
 - Financial News Dataset
@@ -46,7 +46,7 @@ These datasets provide a large and diverse corpus of financial text for NLP task
 
 ---
 
-## ⚙️ Technologies Used
+##  Technologies Used
 
 - Python 3.10
 - spaCy
@@ -56,7 +56,8 @@ These datasets provide a large and diverse corpus of financial text for NLP task
 
 ---
 
-## 🔄 Project Workflow
+
+##  Project Workflow
 
 ### 1. Data Collection
 - Financial datasets downloaded from Kaggle
@@ -77,11 +78,19 @@ These datasets provide a large and diverse corpus of financial text for NLP task
 - Extracts organizations, dates, and monetary values
 - Uses pretrained spaCy NER model
 
-### 5. Custom User-Defined Extraction
+### 5. Model Training (Baseline)
+
+A baseline NER model was fine-tuned using spaCy with auto-annotated financial text to validate entity extraction performance.  
+Training was performed locally on CPU, and the trained model was tested on unseen financial sentences.
+
+Advanced model fine-tuning using CRF or transformer-based models (e.g., FinBERT) is planned as future work.
+
+
+### 6. Custom User-Defined Extraction
 - Allows extraction of financial metrics such as profit or revenue based on user input
 - Rule-based extraction approach
 
-### 6. Long Document Handling
+### 7. Long Document Handling
 - Simulates long financial documents
 - Segments documents into sections such as:
   - MD&A
@@ -89,7 +98,7 @@ These datasets provide a large and diverse corpus of financial text for NLP task
   - Financial Statements
 - Detects and parses table-like numeric content
 
-### 7. Final Output
+### 8. Final Output
 - Generates structured JSON output containing:
   - Section-wise document content
   - Extracted named entities
